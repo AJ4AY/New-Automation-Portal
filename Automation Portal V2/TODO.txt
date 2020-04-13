@@ -1,0 +1,3 @@
+Talk to Ajay about spring boot + Automation portal
+Look into spring boot
+Send Martin database structure

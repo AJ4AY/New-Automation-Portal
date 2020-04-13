@@ -1,0 +1,13 @@
+{
+  	"result": true,
+  	"startDateTime": "2017-09-26T12:50:23.459Z",
+  	"endDateTime": "2017-09-26T12:52:47.715Z",
+  	"username": "OOGUNDIP",
+ 	"generatedDataCount": 1,
+  	"generatedDataType": {
+  		"toolId": 4
+  	},
+  	"testCase": {
+  		"id": 6
+  	}
+}

@@ -1,0 +1,7 @@
+Regression tests --> Only show new data from past 12 months
+remove Test suites
+
+Productivity --> Data generation
+Test --> Physicly testing
+Current potal data
+

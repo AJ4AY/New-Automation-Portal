@@ -1,0 +1,35 @@
+	<html>
+
+<head>
+
+</head>
+<body>
+	<p>Test</p>
+	<textArea id="json"></textarea>
+	<button id="saveoutput">Save Output</button>
+</body>
+
+
+<script>
+    document.getElementById('saveoutput').addEventListener('click',function() {
+		try {
+			xhr = new XMLHttpRequest();
+			var url = "http://localhost:9090/testruns";
+			xhr.open("POST", url, false);
+			xhr.setRequestHeader("Content-type", "application/json");
+			xhr.send(document.getElementById('json').value);
+		}
+		catch(err) {
+		alert(err);
+		}
+		
+		finally {
+		
+        //saveAsFile(this, 'output', 'output');
+		}
+    });   
+
+
+</script>
+
+</html>

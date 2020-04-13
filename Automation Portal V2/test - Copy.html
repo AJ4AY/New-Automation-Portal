@@ -1,0 +1,52 @@
+<html>
+
+<head>
+
+</head>
+<body>
+	<p>Test</p>
+	<button id="saveoutput">Save Output</button>
+</body>
+
+
+<script>
+    document.getElementById('saveoutput').addEventListener('click',function() {
+		payloadObject = new Object();
+
+		var d1 = new Date (),
+		d2 = new Date ( d1 );
+		d2.setMinutes ( d1.getMinutes() + 10 );
+
+		payloadObject.startDateTime = d1;
+		payloadObject.endDateTime = d2;
+		payloadObject.result = true;
+		payloadObject.testSuite = new Object();
+		payloadObject.testSuite.suiteId = 15
+		payloadObject.generatedDataType = new Object();
+		payloadObject.generatedDataType.id = 3;
+		payloadObject.generatedDataCount = 1;
+
+		new Date("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+		
+		try {
+			xhr = new XMLHttpRequest();
+			var url = "http://localhost:9090/testruns";
+			xhr.open("POST", url, false);
+			xhr.setRequestHeader("Content-type", "application/json");
+			console.log(JSON.stringify(payloadObject));
+			xhr.send(JSON.stringify(payloadObject));
+		}
+		catch(err) {
+		alert(err);
+		}
+		
+		finally {
+		
+        //saveAsFile(this, 'output', 'output');
+		}
+    });   
+
+
+</script>
+
+</html>
